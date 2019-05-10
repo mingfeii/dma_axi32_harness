@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <!-- original name: _tb_top_dut_u_dma_axi64_dma_axi64_dual_core_dma_axi64_core0_top_dma_axi64_core0_dma_axi64_core0_channels_dma_axi64_core0_ch0_dma_axi64_ch_fifo_ctrl_dma_axi64_ch_rd_slicerContentFrame2.htm -->
+  <link rel="StyleSheet" media="print"  href="../css/ucdb2htmlP.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html_newlook.css"/>
+  <script type="text/javascript" src="../scripts/jquery.js"></script>
+  <script type="text/javascript" src="../scripts/showhide.js"></script>
+  
+</head>
+<body id="ucdb2html_detail" onload="showLast()">
+  <h1><span class="strip">Questa</span> Branch Coverage Report</h1>
+  <h3>Scope: /<a href="z000075.htm">tb_top</a>/<a href="z000076.htm">dut</a>/<a href="z000561.htm">u_dma_axi64</a>/<a href="z000834.htm">dma_axi64_dual_core</a>/<a href="z001731.htm">dma_axi64_core0_top</a>/<a href="z001975.htm">dma_axi64_core0</a>/<a href="z004612.htm">dma_axi64_core0_channels</a>/<a href="z005792.htm">dma_axi64_core0_ch0</a>/<a href="z009030.htm">dma_axi64_ch_fifo_ctrl</a>/<a href="z010327.htm">dma_axi64_ch_rd_slicer</a></h3>
+  <!-- use script block so buttons vanish when JavaScript is disabled -->
+  <script type="text/javascript">
+  <!--
+  document.write(
+    '<table class="buttons" cellspacing="2" cellpadding="2"><tr>' +
+       '<td id="showAll" width="100" onclick="showAll()" class="button_on" ' +
+           'title="Display all coverage scopes and bins.">Show All</td>' +
+       '<td id="showCov" width="100" onclick="showCov()" class="button_off" ' +
+           'title="Display only covered scopes and bins.">Show Covered</td>' +
+       '<td id="showMis" width="100" onclick="showMis()" class="button_off" ' +
+           'title="Display only uncovered scopes and bins.">Show Missing</td>' +
+    '</tr></table>');
+  //-->
+  </script>
+  <div><a name="cvg10328"/><hr/><table>
+  <tr l="92" lnk="__HDL_srcfile_44.htm#92" z="                  (~wr_incr) &amp; wr_single ? rd_align - rd_ptr[3-..." c="Y" p="50.00"/><tr/>
+  <tr cr="m" t="I" l="92" lnk="__HDL_srcfile_44.htm#92" z="                  (~wr_incr) &amp; wr_single ? rd_align - rd_ptr[3-..." h="0" c="r"/>
+  <tr cr="c" t="E" l="93" lnk="__HDL_srcfile_44.htm#93" z="                  rd_align;" h="3" c="g"/>
+  </table>
+  </div><div class="covered"><a name="cvg10329"/><hr/><table>
+  <tr l="97" lnk="__HDL_srcfile_44.htm#97" z="     if (reset)" c="G" p="100.00"/><tr/>
+  <tr cr="c" t="I" l="97" lnk="__HDL_srcfile_44.htm#97" z="     if (reset)" h="3" c="g"/>
+  <tr cr="c" t="E" l="102" lnk="__HDL_srcfile_44.htm#102" z="     else" h="998" c="g"/>
+  </table>
+  </div><div><a name="cvg10330"/><hr/><table>
+  <tr l="110" lnk="__HDL_srcfile_44.htm#110" z="    case(rd_align_d[3-1:0])" c="R" p="11.11"/><tr/>
+  <tr cr="c" t="T" l="111" lnk="__HDL_srcfile_44.htm#111" z="      3'd0 : slice_rdata = next_rdata[63:0];" h="1" c="g"/>
+  <tr cr="m" t="T" l="112" lnk="__HDL_srcfile_44.htm#112" z="      3'd1 : slice_rdata = {fifo_rdata[55:0], next_rdata[7:0]};..." h="0" c="r"/>
+  <tr cr="m" t="T" l="113" lnk="__HDL_srcfile_44.htm#113" z="      3'd2 : slice_rdata = {fifo_rdata[47:0], next_rdata[15:0]}..." h="0" c="r"/>
+  <tr cr="m" t="T" l="114" lnk="__HDL_srcfile_44.htm#114" z="      3'd3 : slice_rdata = {fifo_rdata[39:0], next_rdata[23:0]}..." h="0" c="r"/>
+  <tr cr="m" t="T" l="115" lnk="__HDL_srcfile_44.htm#115" z="      3'd4 : slice_rdata = {fifo_rdata[31:0], next_rdata[31:0]}..." h="0" c="r"/>
+  <tr cr="m" t="T" l="116" lnk="__HDL_srcfile_44.htm#116" z="      3'd5 : slice_rdata = {fifo_rdata[23:0], next_rdata[39:0]}..." h="0" c="r"/>
+  <tr cr="m" t="T" l="117" lnk="__HDL_srcfile_44.htm#117" z="      3'd6 : slice_rdata = {fifo_rdata[15:0], next_rdata[47:0]}..." h="0" c="r"/>
+  <tr cr="m" t="T" l="118" lnk="__HDL_srcfile_44.htm#118" z="      3'd7 : slice_rdata = {fifo_rdata[7:0],  next_rdata[55:0]}..." h="0" c="r"/>
+  <tr cr="m" t="A" l="110" lnk="__HDL_srcfile_44.htm#110" z="    case(rd_align_d[3-1:0])" h="0" c="r"/>
+  </table>
+  </div><div><a name="cvg10331"/><hr/><table>
+  <tr l="125" lnk="__HDL_srcfile_44.htm#125" z="    case(rd_align_valid[3-1:0])" c="R" p="11.11"/><tr/>
+  <tr cr="c" t="T" l="126" lnk="__HDL_srcfile_44.htm#126" z="      3'd0 : next_rdata_pre = fifo_rdata[63:0];" h="1" c="g"/>
+  <tr cr="m" t="T" l="127" lnk="__HDL_srcfile_44.htm#127" z="      3'd1 : next_rdata_pre = {{56{1'b0}}, fifo_rdata[63:56]};" h="0" c="r"/>
+  <tr cr="m" t="T" l="128" lnk="__HDL_srcfile_44.htm#128" z="      3'd2 : next_rdata_pre = {{48{1'b0}}, fifo_rdata[63:48]};" h="0" c="r"/>
+  <tr cr="m" t="T" l="129" lnk="__HDL_srcfile_44.htm#129" z="      3'd3 : next_rdata_pre = {{40{1'b0}}, fifo_rdata[63:40]};" h="0" c="r"/>
+  <tr cr="m" t="T" l="130" lnk="__HDL_srcfile_44.htm#130" z="      3'd4 : next_rdata_pre = {{32{1'b0}}, fifo_rdata[63:32]};" h="0" c="r"/>
+  <tr cr="m" t="T" l="131" lnk="__HDL_srcfile_44.htm#131" z="      3'd5 : next_rdata_pre = {{24{1'b0}}, fifo_rdata[63:24]};" h="0" c="r"/>
+  <tr cr="m" t="T" l="132" lnk="__HDL_srcfile_44.htm#132" z="      3'd6 : next_rdata_pre = {{16{1'b0}}, fifo_rdata[63:16]};" h="0" c="r"/>
+  <tr cr="m" t="T" l="133" lnk="__HDL_srcfile_44.htm#133" z="      3'd7 : next_rdata_pre = {{8{1'b0}},  fifo_rdata[63:8]};" h="0" c="r"/>
+  <tr cr="m" t="A" l="125" lnk="__HDL_srcfile_44.htm#125" z="    case(rd_align_valid[3-1:0])" h="0" c="r"/>
+  </table>
+  </div><div><a name="cvg10332"/><hr/><table>
+  <tr l="140" lnk="__HDL_srcfile_44.htm#140" z="     if (reset)" c="Y" p="66.66"/><tr/>
+  <tr cr="c" t="I" l="140" lnk="__HDL_srcfile_44.htm#140" z="     if (reset)" h="3" c="g"/>
+  <tr cr="m" t="T" l="142" lnk="__HDL_srcfile_44.htm#142" z="     else if (slice_rd_d)" h="0" c="r"/>
+  <tr cr="c" t="A" l="140" lnk="__HDL_srcfile_44.htm#140" z="     if (reset)" h="998" c="g"/>
+  </table>
+  </div><div><a name="cvg10333"/><hr/><table>
+  <tr l="150" lnk="__HDL_srcfile_44.htm#150" z="     if (reset)" c="Y" p="66.66"/><tr/>
+  <tr cr="c" t="I" l="150" lnk="__HDL_srcfile_44.htm#150" z="     if (reset)" h="3" c="g"/>
+  <tr cr="m" t="T" l="152" lnk="__HDL_srcfile_44.htm#152" z="     else if (fifo_rd | (|next_rsize))" h="0" c="r"/>
+  <tr cr="c" t="A" l="150" lnk="__HDL_srcfile_44.htm#150" z="     if (reset)" h="998" c="g"/>
+  </table>
+  </div><div><a name="cvg10334"/><hr/><table>
+  <tr l="163" lnk="__HDL_srcfile_44.htm#163" z="     if (reset)" c="Y" p="50.00"/><tr/>
+  <tr cr="c" t="I" l="163" lnk="__HDL_srcfile_44.htm#163" z="     if (reset)" h="3" c="g"/>
+  <tr cr="m" t="T" l="165" lnk="__HDL_srcfile_44.htm#165" z="     else if (next_rd)" h="0" c="r"/>
+  <tr cr="m" t="T" l="167" lnk="__HDL_srcfile_44.htm#167" z="     else if (fifo_rd | slice_rd)" h="0" c="r"/>
+  <tr cr="c" t="A" l="163" lnk="__HDL_srcfile_44.htm#163" z="     if (reset)" h="998" c="g"/>
+  </table>
+  </div><script type="text/javascript" src="../scripts/buildbranchpage.js"></script>
+  <!-- make sure jumps to last few line nos work -->
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  
+</body>
+</html>

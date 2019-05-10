@@ -1,0 +1,9 @@
++incdir+.
++incdir+../rtl/axi_slave
++incdir+./env/
++incdir+./env/sequence_libs
+env/axi_pkg.sv
+env/sequence_libs/axi_seq_lib_pkg.sv
+../rtl/axi_slave/axi_slave_incl.v
+demo_pkg.sv
+demo_top.sv
