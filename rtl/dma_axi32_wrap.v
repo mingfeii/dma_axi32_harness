@@ -108,7 +108,7 @@ u_dma_axi32 (
    
    
 axi_slave
-u_axi_slave (
+axi_slave_0 (
     .clk(clk),
 	.reset(reset),
 	.AWID(w_AWID0),

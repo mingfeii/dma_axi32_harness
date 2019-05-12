@@ -11,7 +11,10 @@ class dma_env extends uvm_env;
   // instance of agent
   apb_mstr_agent  apb_mstr_agnt;
   apb_mstr_agent_config apb_mstr_agnt_cfg;
-	
+
+  // AXI
+  Demo_tb m_demo_tb;
+
   dma_env_cfg cfg;
   dma_pharness_base harness;
   dma_vseqr vseqr;
@@ -26,6 +29,8 @@ class dma_env extends uvm_env;
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     $display(cfg.role);
+	m_demo_tb = Demo_tb::type_id::create("axi_slave_0", this);
+	m_demo_tb.m_demo_conf = cfg.m_demo_conf;
     if (cfg.role != BLIND) begin
 	  $display(cfg.role);
       if (! uvm_config_db#(dma_pharness_base)::get(this, "", "harness", harness)) begin
@@ -54,8 +59,8 @@ class dma_env extends uvm_env;
 	
 	  // configure env_cfg
 	  apb_mstr_agnt_cfg.has_functional_coverage = 0;
-	  apb_mstr_agnt_cfg.is_active = UVM_ACTIVE;
-	  uvm_config_db#(apb_mstr_agent_config)::set(null, "*", "APB_MSTR_AGNT_CFG", apb_mstr_agnt_cfg);  
+	  apb_mstr_agnt_cfg.is_active = UVM_PASSIVE;
+	  
 	  
       if (cfg.role == ACTING_AS) begin
         //gpioz_agents["gpioz_if"].is_active = UVM_ACTIVE; gpioz_agents["gpioz_if"].cfg.role = gpioz_pkg::REQUESTER;
@@ -66,8 +71,12 @@ class dma_env extends uvm_env;
 		//mst_apb_agents["mst_apb_if"].is_active = UVM_ACTIVE; mst_apb_agents["mst_apb_if"].cfg.role = apb_pkg::REQUESTER;
         //gpioz_agents["gpioz_if"].is_active = UVM_ACTIVE; gpioz_agents["gpioz_if"].cfg.role = gpioz_pkg::RESPONDER;
         //i2cz_agents["i2cz_if"].is_active = UVM_ACTIVE;
+		apb_mstr_agnt_cfg.has_functional_coverage = 0;
+	    apb_mstr_agnt_cfg.is_active = UVM_ACTIVE;
       end
-    end
+       uvm_config_db#(apb_mstr_agent_config)::set(null, "*", "APB_MSTR_AGNT_CFG", apb_mstr_agnt_cfg); 
+	end
+	
 
 
   endfunction

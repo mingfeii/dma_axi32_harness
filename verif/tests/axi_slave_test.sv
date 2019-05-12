@@ -1,26 +1,23 @@
 
-`ifndef __dma_clk_rst_test__
-`define __dma_clk_rst_test__
+`ifndef __axi_slave_test__
+`define __axi_slave_test__
 
-class dma_clk_rst_test extends dma_base_test;
+class axi_slave_test extends dma_base_test;
   dma_base_vseq vseq; // Only vseqs that extend this base can be run with this test.
 
-  `uvm_component_utils_begin(dma_clk_rst_test)
+  `uvm_component_utils_begin(axi_slave_test)
   `uvm_component_utils_end
    
 
-  function new(string name = "dma_clk_rst_test", uvm_component parent = null);
+  function new(string name = "axi_slave_test", uvm_component parent = null);
     super.new(name, parent);
   endfunction
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-
-    dma_env_cfgs["dut"].role = dma_verif_pkg::ACTING_ON;
-	dma_env_cfgs["dut"].m_demo_conf = Demo_conf::type_id::create("m_demo_conf");
-	dma_env_cfgs["dut"].m_demo_conf.role = demo_pkg::JUST_LOOKING;
-    void'($value$plusargs("CLK_FREQ=%s", dma_env_cfgs["dut"].clk_freq));
-	
+    dma_env_cfgs["dut"].role = dma_verif_pkg::JUST_LOOKING;
+	dma_env_cfgs["dut"].m_demo_conf = Demo_conf::type_id::create("m_demo_conf", this);
+	dma_env_cfgs["dut"].m_demo_conf.role = demo_pkg::ACTING_ON;
   endfunction
 
   virtual task run_phase(uvm_phase phase);

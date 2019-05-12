@@ -21,16 +21,18 @@ package dma_test_pkg;
   
   import apb_agent_pkg::*;
   import dma_verif_pkg::*;
-  
+  import demo_pkg::*;
 
   `include "dma_base_vseq.sv"
 
 
   `include "dma_clk_rst_vseq.sv"
+  `include "axi_slave_vseq.sv"
 
 
   `include "dma_base_test.sv"
   `include "dma_clk_rst_test.sv"
+  `include "axi_slave_test.sv"
 
 endpackage
 

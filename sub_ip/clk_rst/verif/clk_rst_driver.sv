@@ -54,6 +54,7 @@ class clk_rst_driver extends uvm_driver#(clk_rst_seq_item);
   endtask
 
   virtual task run_requester();
+    $display("%m");
     fork
       forever begin
         @(negedge vif.reset_n);
@@ -81,14 +82,14 @@ class clk_rst_driver extends uvm_driver#(clk_rst_seq_item);
                   #(t1);
                   #(t0);
                 end
-                vif.driver_reset_n = '0;
+                vif.driver_reset_n = '1;
               end
               begin
                 repeat (item.rst_break) begin
                   #(t1);
                   #(t0);
                 end
-                vif.driver_reset_n = '1;
+                vif.driver_reset_n = '0;
               end
               begin
                 repeat (item.clk_break) begin

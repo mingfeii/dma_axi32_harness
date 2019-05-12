@@ -37,7 +37,7 @@ interface clk_rst_interface#(FANOUT = clk_rst_param_pkg::FANOUT) (
   //endclocking
   logic driver_reset_n = 'z;
   logic driver_clk = 'z;
-  assign #(1ps) reset_n = !driver_reset_n;
+  assign #(1ps) reset_n = driver_reset_n;
   assign clk = driver_clk;
 
   always @(icb) begin

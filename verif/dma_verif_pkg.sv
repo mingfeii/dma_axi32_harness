@@ -6,6 +6,7 @@ package dma_verif_pkg;
   import uvm_pkg::*;
   import clk_rst_pkg::*;
   import apb_agent_pkg::*;
+  import demo_pkg::*;
 
   typedef enum int {BLIND, JUST_LOOKING, ACTING_AS, ACTING_ON} env_role;
 
